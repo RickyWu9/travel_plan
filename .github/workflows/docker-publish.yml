@@ -33,6 +33,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.ALIYUN_REGISTRY }}/wy_course/course:latest
+          tags: ${{ secrets.ALIYUN_REGISTRY }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
