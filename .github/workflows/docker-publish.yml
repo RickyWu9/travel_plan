@@ -2,12 +2,11 @@ name: Build Docker Image
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
       # 检出代码
       - name: Checkout repository
@@ -26,10 +25,9 @@ jobs:
           tags: travel-planner:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          # 添加构建参数以便调试
           build-args:
             - NODE_ENV=production
-      
+
       # 显示构建结果
       - name: Show build result
         run: echo "Docker image built successfully: travel-planner:latest"
