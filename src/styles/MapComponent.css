@@ -1,0 +1,74 @@
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+/* 高德地图特定样式 */
+.amap-container {
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+}
+
+/* 确保信息窗口样式正常 */
+.amap-infowindow {
+  max-width: 300px;
+}
+
+/* 调整标记点样式 */
+.amap-marker-label {
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.map-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  z-index: 100;
+}
+
+.map-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 69, 0, 0.9);
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  z-index: 100;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .map-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .map-loading,
+  .map-error {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}
