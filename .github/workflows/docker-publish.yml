@@ -27,8 +27,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           # 添加构建参数以便调试
-          build-args: |
-            NODE_ENV=production
+          build-args:
+            - NODE_ENV=production
       
       # 显示构建结果
       - name: Show build result
